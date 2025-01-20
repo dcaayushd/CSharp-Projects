@@ -12,3 +12,4 @@
 /Users/aayush/Development/CSharp Projects/first_program/obj/Debug/net9.0/first_program.pdb
 /Users/aayush/Development/CSharp Projects/first_program/obj/Debug/net9.0/first_program.genruntimeconfig.cache
 /Users/aayush/Development/CSharp Projects/first_program/obj/Debug/net9.0/ref/first_program.dll
+/Users/aayush/Development/CSharp Projects/first_program/obj/Debug/net9.0/first_program.sourcelink.json
