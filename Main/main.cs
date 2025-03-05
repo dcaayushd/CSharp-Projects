@@ -3,14 +3,13 @@ class MainProgram
 {
     public static void Main(String[] ___)
     {
+        Console.WriteLine("\"Hello world!\"");
+        Console.WriteLine("\\");
+        Console.WriteLine("C:\\Desktop\\Program\\dotnet.exe");
+        Console.WriteLine(@"C:\Desktop\Program\dotnet.exe");
         int age = 23;
-        string name = "Aayush";
-        string str = string.Format("Hi {0}!, You're {1} years old.", name, age); 
+        string str = $" Your age is {age} years.";
         Console.WriteLine(str);
-        decimal price = 1235.89564m;
-        string strp = string.Format("Toatl price: {0}", price);
-        string strp1 = string.Format("Toatl price: {0:c}", price);
-        Console.WriteLine(strp);
-        Console.WriteLine(strp1);
+        Console.WriteLine($"{str} You're an adult now.");
     }
 }
