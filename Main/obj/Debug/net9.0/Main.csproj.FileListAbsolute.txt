@@ -1,0 +1,15 @@
+/Users/aayush/Development/CSharp Projects/Main/bin/Debug/net9.0/Main
+/Users/aayush/Development/CSharp Projects/Main/bin/Debug/net9.0/Main.deps.json
+/Users/aayush/Development/CSharp Projects/Main/bin/Debug/net9.0/Main.runtimeconfig.json
+/Users/aayush/Development/CSharp Projects/Main/bin/Debug/net9.0/Main.dll
+/Users/aayush/Development/CSharp Projects/Main/bin/Debug/net9.0/Main.pdb
+/Users/aayush/Development/CSharp Projects/Main/obj/Debug/net9.0/Main.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aayush/Development/CSharp Projects/Main/obj/Debug/net9.0/Main.AssemblyInfoInputs.cache
+/Users/aayush/Development/CSharp Projects/Main/obj/Debug/net9.0/Main.AssemblyInfo.cs
+/Users/aayush/Development/CSharp Projects/Main/obj/Debug/net9.0/Main.csproj.CoreCompileInputs.cache
+/Users/aayush/Development/CSharp Projects/Main/obj/Debug/net9.0/Main.sourcelink.json
+/Users/aayush/Development/CSharp Projects/Main/obj/Debug/net9.0/Main.dll
+/Users/aayush/Development/CSharp Projects/Main/obj/Debug/net9.0/refint/Main.dll
+/Users/aayush/Development/CSharp Projects/Main/obj/Debug/net9.0/Main.pdb
+/Users/aayush/Development/CSharp Projects/Main/obj/Debug/net9.0/Main.genruntimeconfig.cache
+/Users/aayush/Development/CSharp Projects/Main/obj/Debug/net9.0/ref/Main.dll
