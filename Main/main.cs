@@ -3,17 +3,20 @@ class MainProgram
 {
     public static void Main(String[] ___)
     {
-        string str = "123";
-        decimal d = 1234.56789m;
-        decimal d1 = 0m;
-        int num = Convert.ToInt32(str);
-        int num1 = Convert.ToInt32(d);
-        bool b = Convert.ToBoolean(d);
-        bool b1 = Convert.ToBoolean(d1);
-        Console.WriteLine(str);
-        Console.WriteLine(num);
-        Console.WriteLine(num1);
-        Console.WriteLine(b);
-        Console.WriteLine(b1);
+        // Console.Write("Enter a number: ");
+        // string data = Console.ReadLine();
+        // Console.WriteLine(data);
+
+        Console.Write("Enter your age: ");
+        int data = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Do you want to continue? (y/n): ");
+        char yn = Console.ReadKey().KeyChar;
+        Console.WriteLine();
+        Console.WriteLine("You selected " + yn);
+        // int data = int.Parse(Console.ReadLine());
+        Console.WriteLine("Your age is " + data);
+        Console.WriteLine(data + 42);
+
+
     }
 }
