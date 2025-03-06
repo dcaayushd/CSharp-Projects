@@ -3,17 +3,29 @@ class MainProgram
 {
     public static void Main(String[] ___)
     {
-        bool b = 10 < 4;
-        bool b1 = 10 > 4;
-        bool b2 = 10 >= 4;
-        bool b3 = 10 <= 4;
-        bool b4 = 10 == 4;
-        bool b5 = 10 != 4;
-        Console.WriteLine(b);
-        Console.WriteLine(b1);
-        Console.WriteLine(b2);
-        Console.WriteLine(b3);
-        Console.WriteLine(b4);
-        Console.WriteLine(b5);
+        // int marks = 51;
+        Console.Write("Enter Your marks: ");
+        int marks = Convert.ToInt32(Console.ReadLine());
+        #pragma warning disable
+        bool HasPassedTheExam = false;
+        if(marks>= 95 && marks <100){
+            HasPassedTheExam = true;
+            Console.WriteLine("You are among the top Students");
+        }
+        if(marks>= 80 && marks < 95){
+            HasPassedTheExam = true;
+            Console.WriteLine("You have passed the exam with distinction");
+        }
+        else if(marks>= 32 && marks <80){
+            HasPassedTheExam = true;
+            Console.WriteLine("You have passed the exam");
+        }
+        else if(marks>=0 && marks <32){
+            HasPassedTheExam = false;
+            Console.WriteLine("You have failed the exam");
+        }
+        else{
+            Console.WriteLine("Invalid marks entered");
+        }
     }
 }
