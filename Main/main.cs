@@ -3,20 +3,17 @@ class MainProgram
 {
     public static void Main(String[] ___)
     {
-        int number, other;
-        number = other = 23;
-        Console.WriteLine(number);        
-        Console.WriteLine(other);
-
-        number += 12;
-        Console.WriteLine(number);
-
-        number += other =+ 13;
-        Console.WriteLine(number);        
-
-        number += 12 * 11;
-        Console.WriteLine(number);
-
-
+        bool b = 10 < 4;
+        bool b1 = 10 > 4;
+        bool b2 = 10 >= 4;
+        bool b3 = 10 <= 4;
+        bool b4 = 10 == 4;
+        bool b5 = 10 != 4;
+        Console.WriteLine(b);
+        Console.WriteLine(b1);
+        Console.WriteLine(b2);
+        Console.WriteLine(b3);
+        Console.WriteLine(b4);
+        Console.WriteLine(b5);
     }
 }
