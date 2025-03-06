@@ -3,12 +3,20 @@ class MainProgram
 {
     public static void Main(String[] ___)
     {
-        Random rand = new();
-        Console.WriteLine(rand.Next());
-        Console.WriteLine(rand.Next(0, 11));
-        Console.WriteLine(rand.NextDouble());
-        Console.WriteLine(rand.NextSingle());
-        Console.WriteLine(rand.NextInt64());
+        int number, other;
+        number = other = 23;
+        Console.WriteLine(number);        
+        Console.WriteLine(other);
+
+        number += 12;
+        Console.WriteLine(number);
+
+        number += other =+ 13;
+        Console.WriteLine(number);        
+
+        number += 12 * 11;
+        Console.WriteLine(number);
+
 
     }
 }
