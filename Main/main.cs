@@ -1,34 +1,34 @@
 ﻿// using System.Text;
 class MainProgram
 {
-    public static void Main(String[] ___)
+    public static void Main(string[] ___)
     {
-        # pragma warning disable
-        // string name = null; //from database
-        //Normal Approach of checking for null
-        // if (name == null)
+        object thing = "Something";
+        // thing = 12;
+        // thing = 12.435f;
+        // Console.WriteLine(thing);
+
+        //Boxing and Unboxing
+        string str = (string)thing;
+
+
+        // int number;
+        // if (int.TryParse(thing.ToString(), out number))
         // {
-        //     name.EndsWith("_");
+            ////! Some int code
+        // }
+        // if (thing is int number)
+        // {
+            ////! Some int stuff code
         // }
 
-        // Object Oriented Approach
-        // name?.EndsWith("_");
-
-        string name = "Aayush"; //from database
-
-
-        string other = name ?? "Unknown";
-        other?.Contains("");
-        Console.WriteLine(other);
- 
-        // if(name != null) other = name;
-        // else other = "Unknown";
-
-        int? age = null; //from database
-
-        int a = age as int? ?? 0;
-
-        Console.WriteLine(a);
+        if(thing is int){
+            int number = (int)thing;
+        }
+        else if (thing is string){
+            Console.WriteLine("string");
+            //do string stuff code
+        }
 
     }
 }
