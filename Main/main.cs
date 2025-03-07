@@ -3,29 +3,32 @@ class MainProgram
 {
     public static void Main(String[] ___)
     {
-        // int marks = 51;
-        Console.Write("Enter Your marks: ");
-        int marks = Convert.ToInt32(Console.ReadLine());
-        #pragma warning disable
-        bool HasPassedTheExam = false;
-        if(marks>= 95 && marks <100){
-            HasPassedTheExam = true;
-            Console.WriteLine("You are among the top Students");
-        }
-        if(marks>= 80 && marks < 95){
-            HasPassedTheExam = true;
-            Console.WriteLine("You have passed the exam with distinction");
-        }
-        else if(marks>= 32 && marks <80){
-            HasPassedTheExam = true;
-            Console.WriteLine("You have passed the exam");
-        }
-        else if(marks>=0 && marks <32){
-            HasPassedTheExam = false;
-            Console.WriteLine("You have failed the exam");
-        }
-        else{
-            Console.WriteLine("Invalid marks entered");
-        }
+        # pragma warning disable
+        // string name = null; //from database
+        //Normal Approach of checking for null
+        // if (name == null)
+        // {
+        //     name.EndsWith("_");
+        // }
+
+        // Object Oriented Approach
+        // name?.EndsWith("_");
+
+        string name = "Aayush"; //from database
+
+
+        string other = name ?? "Unknown";
+        other?.Contains("");
+        Console.WriteLine(other);
+ 
+        // if(name != null) other = name;
+        // else other = "Unknown";
+
+        int? age = null; //from database
+
+        int a = age as int? ?? 0;
+
+        Console.WriteLine(a);
+
     }
 }
