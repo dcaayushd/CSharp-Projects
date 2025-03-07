@@ -3,44 +3,21 @@ class MainProgram
 {
     public static void Main(string[] ___)
     {
-        // // string command = "run";
-        // string command = "";
-
-        // switch (command)
-        // {
-        //     case "run":
-        //         Console.WriteLine("Running...");
-        //         break;
-
-        //     case "stop":
-        //         Console.WriteLine("Stopped...");
-        //         break;
-
-        //     default:
-        //         Console.WriteLine("Invalid command");
-        //         break;
+        int counter = 0;
+        // do {
+        //     Console.WriteLine($"The current number is {counter}");
+        //     counter++;
         // }
+        // while(counter<10);
+        while(counter<10){
+            int c1 = counter;
+            while (c1<10){
+               Console.Write(c1 + " ");
+               c1++;
 
-        Object thing = "Aayush";
-        thing = 12;
-        thing = null;
-
-        switch (thing)
-        {
-            case int number:
-                Console.WriteLine("The number is " + number);
-                //do int stuff
-                break;
-
-            case string str:
-                Console.WriteLine("The string is " + str);
-                //do string stuff
-                break;
-
-            default:
-                Console.WriteLine("Invalid!");
-                break;
+            }
+               Console.WriteLine();
+                counter++;
         }
-
     }
 }
