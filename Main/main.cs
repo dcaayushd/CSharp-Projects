@@ -39,7 +39,7 @@ class MainProgram
         //     Console.WriteLine(a);
         // }
 
-        int[,] numbers = new int[9, 7];
+        int[,] numbers = new int[9, 14];
 
         // for (int i = 0; i < 9; i++)
         for (int i = 0; i < numbers.GetLength(0); i++)
