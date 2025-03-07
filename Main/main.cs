@@ -10,6 +10,7 @@ class MainProgram
         //     Console.WriteLine(a);
         // }
 
+        // foreach (int a in new int[] { 1, 2, 3, 4, 5})
         foreach (int a in Range(0,10))
         {
             Console.WriteLine(a);
