@@ -1,13 +1,18 @@
-﻿// using System.Text;
+﻿using static System.Linq.Enumerable;
 class MainProgram
 {
     public static void Main(string[] ___)
     {
-        var number = 12;
-        var str = "string";
-        var fltnum = 12.413534567f;
-        Console.WriteLine(number);
-        Console.WriteLine(str);
-        Console.WriteLine(fltnum);
+        // // int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        // int[,] numbers = { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 }, };
+        // foreach (int a in numbers)
+        // {
+        //     Console.WriteLine(a);
+        // }
+
+        foreach (int a in Range(0,10))
+        {
+            Console.WriteLine(a);
+        }
     }
 }
