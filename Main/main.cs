@@ -1,28 +1,28 @@
 ﻿using static System.Linq.Enumerable;
 class MainProgram
 {
-    public static void Main(string[] ___)
+    unsafe static void Main(string[] ___)
     {
-        // int number = 42;
-        // ref int rnum = ref number;
-        // rnum = 12;
-        // Console.WriteLine(number);
-
-        // int number = 12;
-        // ref int n = ref number;
-        // n = 42;
-
-
-        // Console.WriteLine(number);
-
-        int number = 12;
-
-        Foo(ref number);
-        Console.WriteLine(number);
+        int number = 42;
+        int* ptr = &number;
+        Console.WriteLine($"Main: {(ulong)ptr}");
+        Foo(number);
     }
 
-    static void Foo(ref int n){
-        n = 42;
+    //This gives different address
+    // unsafe static void Foo(int n)
+    // {
+    //     int* ptr = &n;
+    //     Console.WriteLine($"Foo: {(ulong)ptr}");
+
+    // }
+    unsafe static void Foo(in int n)
+    {
+        // int other = n + 12;
+        int other = n;
+        fixed (int* ptr = &n)
+            Console.WriteLine($"Foo: {(ulong)ptr}");
+
     }
 
 }
