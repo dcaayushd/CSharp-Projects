@@ -3,42 +3,23 @@ class MainProgram
 {
     static void Main(string[] ___)
     {
+        // Person person = new();
+        // person.name = "Aayush";
+        // person.age = 23U;
+        Person person = new()
+        {
+            name = "Aayush",
+            age = 23U
+        };
 
-        bool canVote;
-        int age = 18;
-        // if (age >= 18)
-        // {
-        //     canVote = true;
-        // }
-        // else
-        // {
-        //     canVote = false;
-        // }
-
-        canVote = age >= 18 ? true : false;
-
-        string can;
-        can = canVote ? "YES" : "No";
-        Console.WriteLine(can);
-
-        //Another
-        bool vote = true;
-
-        // if(vote){
-        //     Foo("YES");
-        // }
-        // else{
-        //     Foo("NO");
-
-        // }
-        Foo(vote ? "YES" : "NO");
-        string str = vote ? "Yes" : 10 < 4 ? "Something" : 100 < 40 ? "More" : "No";
+        Console.WriteLine(person.name);
+        Console.WriteLine(person.age);
 
     }
+}
 
-    static void Foo(string s)
-    {
-        Console.WriteLine(s);
-    }
+class Person{
+    public string? name;
+    public uint age;
 
 }
