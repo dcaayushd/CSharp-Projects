@@ -4,32 +4,59 @@ class MainProgram
     static void Main(string[] ___)
     {
 
-        int add = Sum(2, 5);
-        Console.WriteLine($"The sum of the given numbers is : {add}");
-        
-        int add1 = Sum(2, 5, 6);
-        Console.WriteLine($"The sum of the given numbers is : {add1}");
-        
-        float add2 = Sum(2.120f, 5.340f, 6.09f, 7.980f);
-        Console.WriteLine($"The sum of the given numbers is : {add2}");
+        // int add = Sum(2, 5);
+        // Console.WriteLine($"The sum of the given numbers is : {add}");
+
+        // int add1 = Sum(2, 5, 6);
+        // Console.WriteLine($"The sum of the given numbers is : {add1}");
+
+        // int add2 = Sum(2, 5, 6, 7);
+        // Console.WriteLine($"The sum of the given numbers is : {add2}");
+
+
+
+        decimal sum = Sum(2.4m, -5, 1.78, 6.9807f, 7, "string");
+        Console.WriteLine($"The sum of the given numbers is : {sum}");
+
     }
 
 
-    static int Sum(int n1, int n2)
+    // static int Sum(params int[] numbers)
+    // {
+    //     int total = 0;
+    //     foreach (var num in numbers)
+    //     {
+    //         total += num;
+    //     }
+    //     return total;
+    // }
+    static decimal Sum(params dynamic[] numbers)
     {
-        return n1 + n2;
+        decimal total = 0m;
+        foreach (var num in numbers)
+        {
+            switch (num)
+            {
+                case int:
+                    // break;
+                case long:
+                    // break;
+                case float:
+                    // break;
+                case double:
+                    // break;
+                case decimal:
+                    total += (decimal)num;
+                    break;
 
+                default:
+                    Console.WriteLine($"\n\tNot a number {num}\n");
+                    break;
+
+            }
+        }
+        return total;
     }
-    static int Sum(int n1, int n2, int n3)
-    {
-        return n1 + n2 + n3;
 
-    }
-
-    static float Sum(float n1, float n2, float n3, float n4)
-    {
-        return n1 + n2 + n3 + n4;
-
-    }
 
 }
