@@ -2,23 +2,20 @@ namespace Company
 {
     public class Person
     {
+
+        public Person()
+        {
+            Console.WriteLine("Person() Called");
+            _name = "undefined";
+            age = 0U;
+        }
         string _name;
         public string name
         {
-            // set; get;
-
             set
             {
-                // if (value.Equals(string.Empty) || value == null)
-                // {
-                //     _name = "🥹🥹🥹 ";
-                // }
-                // else
-                // {
-                //     _name = value;
-                // }
 
-                _name = (value.Equals(string.Empty) || value == null) ? "🥹🥹🥹 " : value;
+                _name = (value.Equals(string.Empty) || value == null) ? _name : value;
 
             }
             get
@@ -27,9 +24,6 @@ namespace Company
             }
         }
 
-
-
-        // public readonly uint age; // This is readonly and can't be assigned
         public uint age;
 
         public void Speak()
