@@ -3,31 +3,26 @@ class MainProgram
 {
     public static void Main(string[] ___)
     {
-        int add = Sum(11, 22);
-        Console.WriteLine($"The sum of given two numbers is: {add}");
-        int div = Div(12, 3);
-        Console.WriteLine($"The quotient of given two numbers is: {div}");
+        // int number = 42;
+        // ref int rnum = ref number;
+        // rnum = 12;
+        // Console.WriteLine(number);
+
+        // int number = 12;
+        // ref int n = ref number;
+        // n = 42;
+
+
+        // Console.WriteLine(number);
+
+        int number = 12;
+
+        Foo(ref number);
+        Console.WriteLine(number);
     }
 
-    // static void Foo(){
-    //     if(false){
-    //         return ;
-    //     }
-            //Foo Code
-    // }
-    static int Sum(int a, int b)
-    {
-        // int result = a+b;
-        // return result;
-
-        return a + b;
+    static void Foo(ref int n){
+        n = 42;
     }
-    static int Div(int a, int b)
-    {
-        // int result = a+b;
-        // return result;
-        if (b == 0) return 0;
 
-        return a / b;
-    }
 }
