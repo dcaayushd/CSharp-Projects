@@ -1,57 +1,48 @@
 ﻿namespace CodePlusCircle
 {
-    class AlertDevice{
-        //    public  void AlertPhone(string msg, int n)
-           public static void AlertPhone(string msg, int n)
+    class CustomException : Exception
+    {
+        public CustomException(string message) : base(message)
         {
-            Console.WriteLine($"Alerting {n} for {msg} on Phone...");
+            //Some Custom Exception Codes
         }
-    }
 
+    }
     class MainProgram
     {
-        // static void AlertPhone(string msg, int n)
-        // {
-        //     Console.WriteLine($"Alerting {n} for {msg} on Phone...");
-        // }
-        static void AlertDesktop(string msg, int n)
-        {
-            Console.WriteLine($"Alerting {n} for {msg} on Desktop...");
-        }
-        static void AlertTablet(string msg, int n)
-        {
-            Console.WriteLine($"Alerting {n} for {msg} on Tablet...");
-        }
-
-        delegate void Alert(string msg, int num);
-
         static void Main(string[] ___)
         {
-            // //? If it is in the same class then use below 
-            // //? AlertPhone("emergency", 911);
-            // //? else use this method
-            // AlertDevice.AlertPhone("emergency", 911);
-            // AlertDesktop("emergency", 911);
-            // AlertTablet("emergency", 911);
+            try
+            {
+                bool failure = true; //Based on real data source
+                // bool failure = false; //Based on real data source
+                bool otherCondition = true; //Based on real data source
+                if (failure)
+                {
+                    throw new CustomException("Some kind of exception occurred");
+                }
+                else if (otherCondition)
+                {
+                    throw new ArgumentException("Invalid arguments");
+                }
+                Console.WriteLine("Processing the data...");
 
-            // //! Else we can call like this
-            //If it is in the same class then use below 
-            // Alert alert= AlertPhone;
-            
-            //else use this method
-            Alert alert = AlertDevice.AlertPhone;
-            // if static keyword is removed form AlertDevice than use 
-            // Alert alert= new AlertDevice().AlertPhone;
-            alert += AlertDesktop;
-            alert += AlertTablet;
+            }
 
-            #pragma warning disable
-            // Removes alert from tablet remove this to add alert on tablet
-            alert -= AlertTablet;
+            catch (ArgumentException e)
+            {
+                throw new Exception($"{e.Message} Occurred");
+            }
+            catch (CustomException e)
+            {
+                throw new Exception($"{e.Message} Occurred");
+            }
 
-            //? //Use any one from below to make a call to alert
-            // alert.Invoke("emergency", 911);
-            alert("emergency", 911);
+            finally
+            {
+                // Even if there is exception or no exception this has to be executed 
+                Console.WriteLine("Finally freeing the resources...");
+            }
         }
     }
 }
