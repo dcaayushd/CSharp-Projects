@@ -1,23 +1,31 @@
 abstract class Person
 {
-    public String Name = string.Empty;
-    public int Age = 0;
+    // static public ulong Count = 0UL;
+    public static ulong Count = 0UL;
+    // public int age = 0;
+    public Person()
+    {
+        Count++;
+    }
 
-    abstract public void Speak();
+    // static public void Talk(Person person)
+    // {
+    //     person.age++;
+    //     Console.WriteLine("The person is talking");
+    // }
+    static public void Talk()
+    {
+        Console.WriteLine("The person is talking");
+    }
 }
 
 class Doctor : Person
 {
-    string degree = string.Empty;
-    public override void Speak(){
-        Console.WriteLine("Doctor can speak");
-    }
+    public Doctor() : base() { }
 }
 
 class Patient : Person
-{
-     public override void Speak(){
-        Console.WriteLine("Patient can speak");
-    }
 
+{
+    public Patient() : base() { }
 }
