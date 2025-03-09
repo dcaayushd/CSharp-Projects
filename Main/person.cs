@@ -7,10 +7,22 @@ namespace Company
         {
             Console.WriteLine("Person() Called");
             _name = "undefined";
-            age = 0U;
+            Age = 0U;
+        }
+        #pragma warning disable
+        public Person(string name):this()
+        {
+            Console.WriteLine("Person(string name) Called");
+            Name = name;
+        }
+        public Person(string name, uint age ) :this()
+        {
+            Console.WriteLine("Person(string name, uint age) Called");
+            Name = name;
+            Age = age;
         }
         string _name;
-        public string name
+        public string Name
         {
             set
             {
@@ -24,19 +36,19 @@ namespace Company
             }
         }
 
-        public uint age;
+        public uint Age;
 
         public void Speak()
         {
-            Console.WriteLine($"Yes, {name} who is {age} years old can speak.");
+            Console.WriteLine($"Yes, {Name} who is {Age} years old can speak.");
         }
         public void Breathe()
         {
-            Console.WriteLine($"Yes, {name} who is {age} years old can breathe.");
+            Console.WriteLine($"Yes, {Name} who is {Age} years old can breathe.");
         }
         public void Eat()
         {
-            Console.WriteLine($"Yes, {name} who is {age} years old can eat.");
+            Console.WriteLine($"Yes, {Name} who is {Age} years old can eat.");
         }
 
     }

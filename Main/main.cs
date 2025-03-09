@@ -4,11 +4,16 @@ class MainProgram
     static void Main(string[] ___)
     {
         Person person = new();
-        Person person1= new();
+        Console.WriteLine(person.Name);
+        Console.WriteLine(person.Age);
 
-        Console.WriteLine(person.name);
-        Console.WriteLine(person1.name);
-        Console.WriteLine(person.age);
+        Person person1= new("Shyam");
+        Console.WriteLine(person1.Name);
+        Console.WriteLine(person1.Age);
+
+        Person person2= new("Ram", 34U);
+        Console.WriteLine(person2.Name);
+        Console.WriteLine(person2.Age);
         person.Speak();
         person.Breathe();
         person.Eat();
