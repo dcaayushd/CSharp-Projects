@@ -1,5 +1,4 @@
-﻿using Company;
-class MainProgram
+﻿class MainProgram
 {
     static void Main(string[] ___)
     {
