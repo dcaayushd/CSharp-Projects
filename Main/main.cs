@@ -1,18 +1,41 @@
-﻿class MainProgram
+﻿namespace CodePlusCircle
 {
-    static void Main(string[] ___)
+    interface IPerson
     {
-        // Doctor doctor = new();
-        // Doctor doctor1 = new();
-        // Doctor doctor2 = new();
-        // Patient patient = new();
-        // Patient patient1 = new();
-        // Patient patient2 = new();
-        // Console.WriteLine($"Total Persons: {Patient.Count}");
-        // Console.WriteLine($"Total Persons: {Doctor.Count}");
+        string Name { get; set; }
+        int Age { get; set; }
 
-        Doctor.Talk();
-        Console.WriteLine($"Total Persons: {Person.Count}");
+        string GetName();
+
     }
-}
 
+    interface IManager
+    {
+        string Role { get; set; }
+    }
+
+    class Employee : IPerson, IManager
+    {
+        public string Name { get; set; } = string.Empty;
+        public int Age { get; set; }
+        public string GetName()
+        {
+            return Name;
+        }
+        public string Role { get; set; } = string.Empty;
+    }
+    class MainProgram
+    {
+        static void Main(string[] ___)
+        {
+            // Employee employee = new ();
+            // employee÷.Name = "Shyam";
+            Employee employee = new()
+            {
+                Name = "Shyam",
+            };
+            Console.WriteLine(employee.GetName());
+        }
+    }
+
+}
