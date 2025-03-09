@@ -1,65 +1,57 @@
 ﻿namespace CodePlusCircle
 {
-    interface IPerson
-    {
-        string? Who();
-    }
-
-
-
-    class Employee : IPerson
-    {
-        public string? Who()
+    class AlertDevice{
+        //    public  void AlertPhone(string msg, int n)
+           public static void AlertPhone(string msg, int n)
         {
-            // return ToString()?.Split('.')[^1];
-            return "Employee";
-        }
-    }
-    class Manager : IPerson
-    {
-        public string? Who()
-        {
-            // return "Manager";
-            return ToString()?.Split('.')[^1];
+            Console.WriteLine($"Alerting {n} for {msg} on Phone...");
         }
     }
 
-    class Person
-    {
-        virtual public string? Who()
-        {
-            return "Person";
-        }
-    }
-
-    class TestEmployee : Person
-    {
-        public override string? Who()
-        {
-            return "Test Employee";
-        }
-    }
     class MainProgram
     {
+        // static void AlertPhone(string msg, int n)
+        // {
+        //     Console.WriteLine($"Alerting {n} for {msg} on Phone...");
+        // }
+        static void AlertDesktop(string msg, int n)
+        {
+            Console.WriteLine($"Alerting {n} for {msg} on Desktop...");
+        }
+        static void AlertTablet(string msg, int n)
+        {
+            Console.WriteLine($"Alerting {n} for {msg} on Tablet...");
+        }
+
+        delegate void Alert(string msg, int num);
+
         static void Main(string[] ___)
         {
-            Employee employee = new();
-            Console.WriteLine(employee.Who());
-            Manager manager = new();
-            Console.WriteLine(manager.Who());
+            // //? If it is in the same class then use below 
+            // //? AlertPhone("emergency", 911);
+            // //? else use this method
+            // AlertDevice.AlertPhone("emergency", 911);
+            // AlertDesktop("emergency", 911);
+            // AlertTablet("emergency", 911);
 
-            IPerson person = new Employee();
-            // Console.WriteLine(person.Who());
-            person = new Manager();
-            Console.WriteLine(person.Who());
+            // //! Else we can call like this
+            //If it is in the same class then use below 
+            // Alert alert= AlertPhone;
+            
+            //else use this method
+            Alert alert = AlertDevice.AlertPhone;
+            // if static keyword is removed form AlertDevice than use 
+            // Alert alert= new AlertDevice().AlertPhone;
+            alert += AlertDesktop;
+            alert += AlertTablet;
 
-            Person person1 = new TestEmployee();
-            Console.WriteLine(person1.Who());
-            person1 = new Person();
-            Console.WriteLine(person1.Who());
+            #pragma warning disable
+            // Removes alert from tablet remove this to add alert on tablet
+            alert -= AlertTablet;
 
-
+            //? //Use any one from below to make a call to alert
+            // alert.Invoke("emergency", 911);
+            alert("emergency", 911);
         }
     }
-
 }
