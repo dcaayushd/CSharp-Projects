@@ -1,48 +1,51 @@
 ﻿namespace CodePlusCircle
 {
-    class CustomException : Exception
-    {
-        public CustomException(string message) : base(message)
-        {
-            //Some Custom Exception Codes
-        }
-
-    }
     class MainProgram
     {
+        // static bool isOdd(int n)
+        // {
+        //     return n % 2 == 1;
+        // }
+        // static bool isEven(int n)
+        // {
+        //     return n % 2 == 0;
+        // }
         static void Main(string[] ___)
         {
-            try
-            {
-                bool failure = true; //Based on real data source
-                // bool failure = false; //Based on real data source
-                bool otherCondition = true; //Based on real data source
-                if (failure)
-                {
-                    throw new CustomException("Some kind of exception occurred");
-                }
-                else if (otherCondition)
-                {
-                    throw new ArgumentException("Invalid arguments");
-                }
-                Console.WriteLine("Processing the data...");
+            // var isEven = (int n) => n % 2 == 0;
+            // Console.WriteLine(isEven(6));
 
+            ////! Generic Keyword
+            Func<int, bool> isOdd = (int n) => n % 2 == 1;
+
+            var isEven = (int n) =>
+            {
+                Console.WriteLine("Inside the lambda");
+                return n % 2 == 0;
+            };
+            Console.WriteLine(isEven(6));
+            Console.WriteLine(isOdd(6));
+
+
+            List<int> ints = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            // List<int> odds = ints.Where(isOdd).ToList();
+            // List<int> evens = ints.Where(isEven).ToList();
+            ////! Instead of using above use below
+            ////! List<int>odds = (List<int>)ints.Where((int n) => n % 2 == 1);
+            ////! List<int>evens = (List<int>)ints.Where((int n) => n % 2 == 0);
+            List<int> odds = ints.Where((int n) => n % 2 == 1).ToList();
+            List<int> evens = ints.Where((int n) => n % 2 == 0).ToList();
+            Console.WriteLine("Odd Numbers from the list ints are:");
+            foreach (var i in odds)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("Even Numbers from the list ints are:");
+            foreach (var i in evens)
+            {
+                Console.WriteLine(i);
             }
 
-            catch (ArgumentException e)
-            {
-                throw new Exception($"{e.Message} Occurred");
-            }
-            catch (CustomException e)
-            {
-                throw new Exception($"{e.Message} Occurred");
-            }
-
-            finally
-            {
-                // Even if there is exception or no exception this has to be executed 
-                Console.WriteLine("Finally freeing the resources...");
-            }
         }
     }
 }
