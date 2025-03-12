@@ -1,6 +1,4 @@
-﻿// using System.Numerics;
-
-namespace CodePlusCircle
+﻿namespace CodePlusCircle
 {
     class MainProgram
     {
